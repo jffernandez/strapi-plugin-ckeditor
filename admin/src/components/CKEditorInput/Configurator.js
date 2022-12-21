@@ -21,6 +21,7 @@ import ckeditor5TableDll from "@ckeditor/ckeditor5-table/build/table.js";
 import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-count.js";
 import ckeditor5MaximumLengthDll from "@reinmar/ckeditor5-maximum-length/build/maximum-length.js";
 import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
+import ckeditor5SourceEditingDll from "@ckeditor/ckeditor5-source-editing/build/source-editing.js";
 
 const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
   light: {
@@ -195,7 +196,8 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.table.TableColumnResize,
       window.CKEditor5.table.TableCaption,
       window.CKEditor5.wordCount.WordCount,
-      StrapiMediaLib
+      StrapiMediaLib,
+      window.CKEditor5.sourceEditing.SourceEditing,
     ],
     toolbar: [
         'heading',
@@ -206,7 +208,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'outdent', 'indent', 'alignment',
         '|',
-        'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'horizontalLine', 'codeBlock', 'htmlEmbed',
+        'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'horizontalLine', 'codeBlock', 'htmlEmbed', 'sourceEditing',
         '|',
         'undo', 'redo'
     ],
@@ -299,6 +301,19 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     fontBackgroundColor: {
       columns: 5,
       documentColors: 10,
+    },
+    link: {
+      decorators: {
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          defaultValue: true, // This option will be selected by default.
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          },
+        },
+      },
     },
   }
 };
