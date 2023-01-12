@@ -1,27 +1,27 @@
-import ckeditor5Dll from "ckeditor5/build/ckeditor5-dll.js";
+import ckeditor5Dll from 'ckeditor5/build/ckeditor5-dll.js'
 
-import ckeditor5AlignmentDll from "@ckeditor/ckeditor5-alignment/build/alignment.js";
-import ckeditor5AutoformatDll from "@ckeditor/ckeditor5-autoformat/build/autoformat.js";
-import ckeditor5BasicStylesDll from "@ckeditor/ckeditor5-basic-styles/build/basic-styles.js";
-import ckeditor5BlockQuoteDll from "@ckeditor/ckeditor5-block-quote/build/block-quote.js";
-import ckeditor5CodeBlockDll from "@ckeditor/ckeditor5-code-block/build/code-block.js";
-import ckeditor5EssentialsDll from "@ckeditor/ckeditor5-essentials/build/essentials.js";
-import ckeditor5FontDll from "@ckeditor/ckeditor5-font/build/font.js";
-import ckeditor5HeadingDll from "@ckeditor/ckeditor5-heading/build/heading.js";
-import ckeditor5HtmlEmbedDll from "@ckeditor/ckeditor5-html-embed/build/html-embed.js";
-import ckeditor5HorizontalLineDll from "@ckeditor/ckeditor5-horizontal-line/build/horizontal-line.js";
-import ckeditor5MediaEmbedDll from "@ckeditor/ckeditor5-media-embed/build/media-embed.js";
-import ckeditor5ImageDll from "@ckeditor/ckeditor5-image/build/image.js";
-import ckeditor5IndentDll from "@ckeditor/ckeditor5-indent/build/indent.js";
-import ckeditor5LinkDll from "@ckeditor/ckeditor5-link/build/link.js";
-import ckeditor5ListDll from "@ckeditor/ckeditor5-list/build/list.js";
-import ckeditor5PasteFromOfficeDll from "@ckeditor/ckeditor5-paste-from-office/build/paste-from-office.js";
-import ckeditor5RemoveFormatDll from "@ckeditor/ckeditor5-remove-format/build/remove-format.js";
-import ckeditor5TableDll from "@ckeditor/ckeditor5-table/build/table.js";
-import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-count.js";
-import ckeditor5MaximumLengthDll from "@reinmar/ckeditor5-maximum-length/build/maximum-length.js";
-import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
-import ckeditor5SourceEditingDll from "@ckeditor/ckeditor5-source-editing/build/source-editing.js";
+import ckeditor5AlignmentDll from '@ckeditor/ckeditor5-alignment/build/alignment.js'
+import ckeditor5AutoformatDll from '@ckeditor/ckeditor5-autoformat/build/autoformat.js'
+import ckeditor5BasicStylesDll from '@ckeditor/ckeditor5-basic-styles/build/basic-styles.js'
+import ckeditor5BlockQuoteDll from '@ckeditor/ckeditor5-block-quote/build/block-quote.js'
+import ckeditor5CodeBlockDll from '@ckeditor/ckeditor5-code-block/build/code-block.js'
+import ckeditor5EssentialsDll from '@ckeditor/ckeditor5-essentials/build/essentials.js'
+import ckeditor5FontDll from '@ckeditor/ckeditor5-font/build/font.js'
+import ckeditor5HeadingDll from '@ckeditor/ckeditor5-heading/build/heading.js'
+import ckeditor5HtmlEmbedDll from '@ckeditor/ckeditor5-html-embed/build/html-embed.js'
+import ckeditor5HorizontalLineDll from '@ckeditor/ckeditor5-horizontal-line/build/horizontal-line.js'
+import ckeditor5MediaEmbedDll from '@ckeditor/ckeditor5-media-embed/build/media-embed.js'
+import ckeditor5ImageDll from '@ckeditor/ckeditor5-image/build/image.js'
+import ckeditor5IndentDll from '@ckeditor/ckeditor5-indent/build/indent.js'
+import ckeditor5LinkDll from '@ckeditor/ckeditor5-link/build/link.js'
+import ckeditor5ListDll from '@ckeditor/ckeditor5-list/build/list.js'
+import ckeditor5PasteFromOfficeDll from '@ckeditor/ckeditor5-paste-from-office/build/paste-from-office.js'
+import ckeditor5RemoveFormatDll from '@ckeditor/ckeditor5-remove-format/build/remove-format.js'
+import ckeditor5TableDll from '@ckeditor/ckeditor5-table/build/table.js'
+import ckeditor5WordCountDll from '@ckeditor/ckeditor5-word-count/build/word-count.js'
+import ckeditor5MaximumLengthDll from '@reinmar/ckeditor5-maximum-length/build/maximum-length.js'
+import { StrapiMediaLib } from './plugins/StrapiMediaLib'
+import ckeditor5SourceEditingDll from '@ckeditor/ckeditor5-source-editing/build/source-editing.js'
 
 const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
   light: {
@@ -46,16 +46,22 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.table.TableColumnResize,
       window.CKEditor5.table.TableCaption,
       window.CKEditor5.wordCount.WordCount,
-      StrapiMediaLib
+      StrapiMediaLib,
     ],
     toolbar: [
       'heading',
       '|',
-      'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+      'bold',
+      'italic',
+      'link',
+      'bulletedList',
+      'numberedList',
       '|',
-      'strapiMediaLib', 'insertTable',
+      'strapiMediaLib',
+      'insertTable',
       '|',
-      'undo', 'redo'
+      'undo',
+      'redo',
     ],
     heading: {
       options: [
@@ -64,7 +70,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
         { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
         { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
-      ]
+      ],
     },
     image: {
       toolbar: [
@@ -73,17 +79,11 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'imageStyle:side',
         '|',
         'toggleImageCaption',
-        'imageTextAlternative'
-      ]
+        'imageTextAlternative',
+      ],
     },
     table: {
-      contentToolbar: [
-        'tableColumn',
-        'tableRow',
-        'mergeTableCells',
-        '|',
-        'toggleTableCaption'
-      ]
+      contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', '|', 'toggleTableCaption'],
     },
   },
 
@@ -113,18 +113,28 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.table.TableColumnResize,
       window.CKEditor5.table.TableCaption,
       window.CKEditor5.wordCount.WordCount,
-      StrapiMediaLib
+      StrapiMediaLib,
     ],
     toolbar: [
-        'heading',
-        '|',
-        'bold', 'italic', 'link', 'bulletedList', 'numberedList',
-        '|',
-        'outdent', 'indent',
-        '|',
-        'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
-        '|',
-        'undo', 'redo'
+      'heading',
+      '|',
+      'bold',
+      'italic',
+      'link',
+      'bulletedList',
+      'numberedList',
+      '|',
+      'outdent',
+      'indent',
+      '|',
+      'strapiMediaLib',
+      'mediaEmbed',
+      'blockQuote',
+      'insertTable',
+      'codeBlock',
+      '|',
+      'undo',
+      'redo',
     ],
     heading: {
       options: [
@@ -133,7 +143,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
         { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
         { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
-      ]
+      ],
     },
     image: {
       toolbar: [
@@ -144,17 +154,11 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleImageCaption',
         'imageTextAlternative',
         '|',
-        'linkImage'
-      ]
+        'linkImage',
+      ],
     },
     table: {
-      contentToolbar: [
-        'tableColumn',
-        'tableRow',
-        'mergeTableCells',
-        '|',
-        'toggleTableCaption'
-      ]
+      contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', '|', 'toggleTableCaption'],
     },
   },
 
@@ -200,17 +204,35 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.sourceEditing.SourceEditing,
     ],
     toolbar: [
-        'heading',
-        '|',
-        'bold', 'italic', 'link', 'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'removeFormat',
-        '|',
-        'bulletedList', 'numberedList',
-        '|',
-        'outdent', 'indent', 'alignment',
-        '|',
-        'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'horizontalLine', 'codeBlock', 'htmlEmbed', 'sourceEditing',
-        '|',
-        'undo', 'redo'
+      'heading',
+      '|',
+      'bold',
+      'italic',
+      'link',
+      'fontSize',
+      'fontFamily',
+      'fontColor',
+      'fontBackgroundColor',
+      'removeFormat',
+      '|',
+      'bulletedList',
+      'numberedList',
+      '|',
+      'outdent',
+      'indent',
+      'alignment',
+      '|',
+      'strapiMediaLib',
+      'mediaEmbed',
+      'blockQuote',
+      'insertTable',
+      'horizontalLine',
+      'codeBlock',
+      'htmlEmbed',
+      'sourceEditing',
+      '|',
+      'undo',
+      'redo',
     ],
     heading: {
       options: [
@@ -219,39 +241,47 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
         { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
         { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
-      ]
+      ],
     },
     image: {
-      resizeUnit: "%",
-      resizeOptions: [ {
-        name: 'resizeImage:original',
-        value: null,
-        icon: 'original'
-      },
-      {
-        name: 'resizeImage:25',
-        value: '25',
-        icon: 'small'
-      },
-      {
-        name: 'resizeImage:50',
-        value: '50',
-        icon: 'medium'
-      },
-      {
-        name: 'resizeImage:75',
-        value: '75',
-        icon: 'large'
-      } ],
+      resizeUnit: '%',
+      resizeOptions: [
+        {
+          name: 'resizeImage:original',
+          value: null,
+          icon: 'original',
+        },
+        {
+          name: 'resizeImage:25',
+          value: '25',
+          icon: 'small',
+        },
+        {
+          name: 'resizeImage:50',
+          value: '50',
+          icon: 'medium',
+        },
+        {
+          name: 'resizeImage:75',
+          value: '75',
+          icon: 'large',
+        },
+      ],
       toolbar: [
-        'imageStyle:inline', 'imageStyle:block', 'imageStyle:side',
+        'imageStyle:inline',
+        'imageStyle:block',
+        'imageStyle:side',
         '|',
-        'toggleImageCaption', 'imageTextAlternative',
+        'toggleImageCaption',
+        'imageTextAlternative',
         '|',
         'linkImage',
         '|',
-        'resizeImage:25', 'resizeImage:50', 'resizeImage:75', 'resizeImage:original'
-      ]
+        'resizeImage:25',
+        'resizeImage:50',
+        'resizeImage:75',
+        'resizeImage:original',
+      ],
     },
     table: {
       contentToolbar: [
@@ -262,22 +292,12 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'tableCellProperties',
         'tableProperties',
         '|',
-        'toggleTableCaption'
-      ]
+        'toggleTableCaption',
+      ],
     },
     fontSize: {
-      options: [
-          9,
-          11,
-          13,
-          'default',
-          17,
-          19,
-          21,
-          27,
-          35,
-      ],
-      supportAllValues: false
+      options: [9, 11, 13, 'default', 17, 19, 21, 27, 35],
+      supportAllValues: false,
     },
     fontFamily: {
       options: [
@@ -292,7 +312,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'Verdana, Geneva, sans-serif',
         'Roboto, Roboto Black, Roboto Medium, Roboto Light, sans-serif',
       ],
-      supportAllValues: true
+      supportAllValues: true,
     },
     fontColor: {
       columns: 5,
@@ -310,45 +330,48 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
           defaultValue: true, // This option will be selected by default.
           attributes: {
             target: '_blank',
-            rel: 'noopener noreferrer'
+            rel: 'noopener noreferrer',
           },
         },
       },
     },
-  }
-};
+    mediaEmbed: {
+      previewsInData: true,
+    },
+  },
+}
 
 export default class Configurator {
-  constructor ( fieldConfig ) {
-    this.fieldConfig = fieldConfig;
+  constructor(fieldConfig) {
+    this.fieldConfig = fieldConfig
   }
 
   getEditorConfig() {
-    const config = this._getBaseConfig();
+    const config = this._getBaseConfig()
 
-    if ( this.fieldConfig.maxLength ) {
-      config.plugins.push( window.CKEditor5.maximumLength.MaximumLength );
+    if (this.fieldConfig.maxLength) {
+      config.plugins.push(window.CKEditor5.maximumLength.MaximumLength)
 
       config.maximumLength = {
-        characters: this.fieldConfig.maxLength
-      };
+        characters: this.fieldConfig.maxLength,
+      }
     }
 
-    return config;
+    return config
   }
 
   _getBaseConfig() {
-    const presetName = this.fieldConfig.options.preset;
+    const presetName = this.fieldConfig.options.preset
 
-    switch ( presetName ) {
+    switch (presetName) {
       case 'light':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
+        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light
       case 'standard':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.standard;
+        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.standard
       case 'rich':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.rich;
+        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.rich
       default:
-        throw new Error('Invalid preset name ' + presetName);
+        throw new Error('Invalid preset name ' + presetName)
     }
   }
 }
